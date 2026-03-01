@@ -16,7 +16,6 @@ void print_array(int *a, int n)
 	{
 		printf("%d", a[i]);
 
-		/* طباعة الفاصلة والمسافة فقط إذا لم يكن العنصر الأخير */
 		if (i < n - 1)
 		{
 			printf(", ");
