@@ -1,1 +1,1 @@
-C - More pointers, arrays and strings
+README for pointers_arrays_strings project
