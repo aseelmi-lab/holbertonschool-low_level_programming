@@ -12,14 +12,14 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int i = 0;
 
-	/* نسخ أحرف المصدر حتى نصل لنهايته أو نصل للحد n */
+	/* Copy characters from src to dest up to n bytes */
 	while (i < n && src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
 	}
 
-	/* إذا كان المصدر أقصر من n، يتم ملء الباقي بـ null bytes */
+	/* If src is shorter than n, pad the rest with null bytes */
 	while (i < n)
 	{
 		dest[i] = '\0';
