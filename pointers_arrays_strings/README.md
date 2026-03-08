@@ -1,1 +1,1 @@
-Main README for Holberton School projects
+Even more pointers, arrays and strings
