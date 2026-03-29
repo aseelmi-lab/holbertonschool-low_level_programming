@@ -12,12 +12,16 @@ void free_grid(int **grid, int height)
 {
 	int i;
 
+	/* التأكد من أن المصفوفة ليست فارغة أصلاً */
 	if (grid == NULL || height <= 0)
 		return;
 
+	/* 1. تحرير كل صف منفرداً */
 	for (i = 0; i < height; i++)
 	{
 		free(grid[i]);
 	}
+
+	/* 2. تحرير المصفوفة الرئيسية التي تحتوي على مؤشرات الصفوف */
 	free(grid);
 }
