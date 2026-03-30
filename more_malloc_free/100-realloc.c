@@ -32,7 +32,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	old_ptr = ptr;
 
-	/* نسخ البيانات حتى أصغر الحجمين لضمان عدم تجاوز الذاكرة */
+	/* Copy data up to the minimum of old and new sizes */
+	/* to ensure we don't access unallocated memory */
 	if (new_size < old_size)
 	{
 		for (i = 0; i < new_size; i++)
