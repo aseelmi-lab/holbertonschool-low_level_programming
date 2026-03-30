@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * is_digit - checks if a string contains only digits
@@ -39,7 +38,14 @@ int _strlen(char *s)
  */
 void errors(void)
 {
-	printf("Error\n");
+	char *s = "Error\n";
+	int i = 0;
+
+	while (s[i])
+	{
+		_putchar(s[i]);
+		i++;
+	}
 	exit(98);
 }
 
@@ -62,7 +68,7 @@ int main(int argc, char *argv[])
 	result = malloc(sizeof(int) * len);
 	if (!result)
 		return (1);
-	for (i = 0; i <= len1 + len2; i++)
+	for (i = 0; i < len; i++)
 		result[i] = 0;
 	for (len1 = len1 - 1; len1 >= 0; len1--)
 	{
