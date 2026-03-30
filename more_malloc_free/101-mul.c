@@ -54,12 +54,10 @@ int main(int argc, char *argv[])
 	char *s1, *s2;
 	int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
 
-	if (argc != 3 || !is_digit(argv[1]) || !is_digit(argv[2]))
+	s1 = argv[1], s2 = argv[2];
+	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
 		errors();
-	s1 = argv[1];
-	s2 = argv[2];
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
+	len1 = _strlen(s1), len2 = _strlen(s2);
 	len = len1 + len2 + 1;
 	result = malloc(sizeof(int) * len);
 	if (!result)
@@ -89,7 +87,6 @@ int main(int argc, char *argv[])
 	}
 	if (!a)
 		_putchar('0');
-	_putchar('\n');
-	free(result);
+	_putchar('\n'), free(result);
 	return (0);
 }
