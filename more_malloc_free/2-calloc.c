@@ -6,7 +6,7 @@
  * @nmemb: number of elements
  * @size: size of each element
  *
- * Return: pointer to allocated memory, or NULL if fails
+ * Return: pointer to allocated memory
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
