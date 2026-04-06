@@ -19,7 +19,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		printf("%d", va_arg(nums, int));
 
-		/* اطبع الفاصل إذا لم يكن NULL وإذا لم نصل لآخر عنصر */
 		if (i < (n - 1) && separator != NULL)
 			printf("%s", separator);
 	}
